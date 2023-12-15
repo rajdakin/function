@@ -51,6 +51,19 @@ tests/sv_termination_restricted/UpAndDown_false-termination.c	1s	0	UNKNOWN	-term
 tests/sv_termination_restricted/UpAndDownIneq_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/WhileNested_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/WhileNestedOffset_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/2Nested_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Bangalore_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Bangalore_v2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Bangalore_v3_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Hanoi_3vars_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Hanoi_plus_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Mysore_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTermination2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTerminationSimple3_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTerminationSimple4_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTerminationSimple6_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Singapore_v1_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Singapore_v2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/tap2008a.c	1s	0	UNKNOWN		1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 
 	Terminating
@@ -115,9 +128,18 @@ tests/sv_termination_restricted/PastaB17_true-termination.c	1s	0	UNKNOWN	-termin
 tests/sv_termination_restricted/PastaC7_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/PastaC9_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/sv_termination_restricted/Sequence_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv-termination-crafted/Bangalore_v4_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv-termination-crafted/easy1_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv-termination-crafted/Hanoi_2vars_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Lobnya-Boolean-Reordered_true-termination.c	1s	0	TRUE	-ordinals 1 -termination	1s	0	TRUE	-ordinals 1 -termination -domain octagons	1s	0	TRUE	-ordinals 1 -termination -domain polyhedra
+tests/sv-termination-crafted/NonTermination4_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTerminationSimple7_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Nyala-2lex_true-termination.c	1s	0	TRUE	-ordinals 1 -termination	1s	0	TRUE	-ordinals 1 -termination -domain octagons	1s	0	TRUE	-ordinals 1 -termination -domain polyhedra
+tests/sv-termination-crafted/Pure2Phase_true-termination.c	1s	0	TRUE	-ordinals 2 -termination	1s	0	TRUE	-ordinals 2 -termination -domain octagons	1s	0	TRUE	-ordinals 2 -termination -domain polyhedra
+tests/sv-termination-crafted/Rotation180_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Singapore_plus_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/boolean.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/cacm2009c.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-refine -termination	1s	0	TRUE	-refine -termination -domain octagons	1s	0	TRUE	-refine -termination -domain polyhedra
-	NOTE: no need to refine
 tests/cacm2009d.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/example2e.c	2s	0	UNKNOWN	-termination	3s	0	TRUE	-termination -domain octagons	2s	0	TRUE	-termination -domain polyhedra
 
@@ -135,6 +157,15 @@ tests/sv_termination_restricted/b.18_true-termination.c	1s	0	TRUE	-termination	1
 tests/sv_termination_restricted/DivMinus_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 	TODO: check why the octagons domain cannot detect termination
 tests/sv_termination_restricted/java_AG313_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+	TODO: check why the octagons domain cannot detect termination
+	This one seems quite short, look at it first?
+tests/sv-termination-crafted/aaron2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: x decreases every iteration since y > 0
+	TODO: why does this also requires refining?
+tests/sv-termination-crafted/Bangalore_true-termination.c	1s	0	UNKNOWN	-ordinals 1 -termination	1s	0	UNKNOWN	-ordinals 1 -termination -domain octagons	1s	0	UNKNOWN	-ordinals 1 -termination -domain polyhedra	1s	0	TRUE	-refine -ordinals 1 -domain octagons
+	TODO check why this doesn't terminate either with the octagons domain(?)
+	NOTE: why refine?
+tests/sv-termination-crafted/MenloPark_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-refine -ordinals 1 -termination -domain polyhedra
 
 	Terminating but undetected
 	--------------------------
@@ -192,73 +223,76 @@ tests/sv_termination_restricted/PastaC1_true-termination.c	1s	0	UNKNOWN	-termina
 tests/sv_termination_restricted/PastaC2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	Same as c.03_true-termination
 tests/sv_termination_restricted/PastaC3_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-	NOTE: I have no idea how to detect termination on this...
+	NOTE: I have no idea how to detect termination on this... => joinbwd 4
 tests/sv_termination_restricted/PlusSwap_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-
-	TODO: check from here
-tests/sv-termination-crafted/Lobnya-Boolean-Reordered_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/RecursiveMultiplication_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Piecewise_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Arrays03-ValueRestictsIndex_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/Arrays02-EquivalentConstantIndices_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/LexIndexValue-Array_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/LexIndexValue-Pointer_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTermination3_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/aaron2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/TelAviv-Amir-Minimum_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Benghazi_nondet_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Bangalore_v3_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Rotation180_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Singapore_v2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Gothenburg_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/aaron3_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Thun_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/easy1_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv-termination-crafted/Pure3Phase_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTermination2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/McCarthy91_Iteration_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Singapore_v1_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Pure2Phase_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Arrays01-EquivalentConstantIndices_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/NonTerminationSimple4_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/LexIndexValue-Pointer_false-valid-deref.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/Bangalore_v2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Hanoi_3vars_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Mysore_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/2Nested_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Singapore_plus_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-	TODO check why this doesn't terminate after 6m30 with the octagons domain (but the memory doesn't increase... infinite loop?)
-tests/sv-termination-crafted/Benghazi_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Copenhagen_disj_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Nyala-2lex_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Bangalore_v4_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv-termination-crafted/Mysore_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Toulouse-MultiBranchesToLoop_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Binary_Search_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Ackermann_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
-tests/sv-termination-crafted/2Nested_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Hanoi_2vars_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTermination4_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Bangalore_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Hanoi_plus_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTerminationSimple7_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Bangalore_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Stockholm_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Parallel_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Ackermann_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+	NOTE: I have no idea how to detect termination on this...
 tests/sv-termination-crafted/4NestedWith3Variables_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Singapore_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTerminationSimple6_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-	TODO check why this doesn't terminate either(?)
-	tests/sv-termination-crafted/MenloPark_true-termination.c	1s	0	UNKNOWN	-termination	3s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/MenloPark_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/Toulouse-BranchesToLoop_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/easy2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv-termination-crafted/NonTerminationSimple3_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: phases
+tests/sv-termination-crafted/2Nested_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: I have no idea how to detect termination on this...
+tests/sv-termination-crafted/aaron3_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: I have no idea how to detect termination on this...
+	TODO: check why this doesn't terminate after 6m30 with the octagons domain (but the memory doesn't increase... infinite loop?)
+tests/sv-termination-crafted/Benghazi_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: I have no idea how to detect termination on this...
+tests/sv-termination-crafted/Benghazi_nondet_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: max(x, y) decreases every iteration
 tests/sv-termination-crafted/Copenhagen_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: max(x, y) decreases every iteration
+tests/sv-termination-crafted/Copenhagen_disj_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: same as Stockholm_true-termination
+tests/sv-termination-crafted/Gothenburg_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: same as Stockholm_true-termination
+tests/sv-termination-crafted/Gothenburg_v2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: McCarthy algorithm
+tests/sv-termination-crafted/McCarthy91_Iteration_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: phases
+tests/sv-termination-crafted/Mysore_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: this seems minimal
+	NOTE: this probably fails since we have a disjunction
+tests/sv-termination-crafted/Parallel_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: I have no idea how to detect termination on this...
+tests/sv-termination-crafted/Piecewise_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: phases
+tests/sv-termination-crafted/Pure3Phase_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: x is strictly decreasing
+tests/sv-termination-crafted/Singapore_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: this seems like an easy one (should be able to detect with the octagons domain, but fails to widen)
+tests/sv-termination-crafted/Stockholm_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: min(x, y) is strictly decreasing every step
+tests/sv-termination-crafted/TelAviv-Amir-Minimum_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	NOTE: needs to do a loop unfolding
+tests/sv-termination-crafted/Thun_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	TODO: why is there a top?(?)
+tests/sv-termination-crafted/Toulouse-BranchesToLoop_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	TODO: why is there a top?
+tests/sv-termination-crafted/Toulouse-MultiBranchesToLoop_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+
+	Recursion, arrays and pointers
+	---------  ------     --------
 	NOTE octagons are slower than polyhedra (by ~1.5s)
 tests/sv-termination-crafted/4BitCounterPointer_true-termination.c	1s	0	TRUE	-termination	4s	0	TRUE	-termination -domain octagons	2s	0	TRUE	-termination -domain polyhedra
-tests/sv-termination-crafted/Gothenburg_v2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/Ackermann_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/Ackermann_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/Arrays01-EquivalentConstantIndices_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/Arrays02-EquivalentConstantIndices_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/Arrays03-ValueRestictsIndex_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/Binary_Search_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/LexIndexValue-Array_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/LexIndexValue-Pointer_false-valid-deref.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/LexIndexValue-Pointer_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/NonTermination3_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv-termination-crafted/RecursiveMultiplication_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+
+	TODO: FIXME:
+	'-ordinals 1 -domain octagons' finishes fast and returns TRUE (normal)
+	'-domain octagons' finishes fast and returns UNKNOWN (normal)
+	'-refine -domain octagons' finishes SLOWLY (ANORMAL) and returns UNKNOWN (normal)
+	'-refine -ordinals 1 -domain octagons' finishes SLOWLY (ANORMAL) and returns UNKNOWN (ANORMAL)
+	=> '-refine' BREAKS THIS TEST
+tests/sv-termination-crafted/easy2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+
+	TODO: check from here
 tests/example5.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/recursion.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/tap2008b.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
@@ -306,7 +340,6 @@ tests/termination/tacas2013a.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -do
 tests/termination/countdown.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/termination/sas2010.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/termination/widening2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/termination/mccarthy91.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/termination/example8.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/termination/vmcai2004a.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/termination/tacas2013c.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
