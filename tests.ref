@@ -16,6 +16,29 @@ tests/ctl/koskinen/acqrel_mod.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminat
 tests/ctl/koskinen/acqrel.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/ctl/koskinen/toylin1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/ctl/koskinen/win4.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/cav2015.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/nestedRandomLoop_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/PotentialMinimizeSEVPABug.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/simple-1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/someNonterminating.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/timer-simple.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/togglecounter_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/toggletoggle_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/report/test_existential2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/report/test_global.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/sv_comp/Bangalore_false-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/sv_comp/Ex02_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/sv_comp/Ex07_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/sv_comp/Madrid_true-no-overflow_false-termination_true-valid-memsafety.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/sv_comp/NO_02_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/t2_cav13/P3.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/t2_cav13/P4.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/and_test.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/fin_ex.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/global_test_simple.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/or_test.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/potential_termination_1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/until_existential.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: add guarantee testing
 tests/guarantee/countdown.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/guarantee/mnav.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
@@ -98,6 +121,19 @@ tests/termination/zune.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -do
 
 	Terminating
 	-----------
+tests/ctl/ltl_automizer/Bug_NoLoopAtEndForTerminatingPrograms_safe.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/report/test_existential3.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/report/test_until.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/sv_comp/java_Sequence_true-termination_true-no-overflow.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/t2_cav13/P25.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/t2_cav13/P3_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain octagons -ordinals 1
+tests/ctl/existential_test1.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/existential_test2.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/existential_test3.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/existential_test4.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/multi_branch_choice.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/next.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/until_test.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 	TODO: add guarantee testing
 tests/guarantee/example.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 	NOTE: what?
@@ -224,11 +260,13 @@ tests/termination/vmcai2004a.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminati
 tests/termination/widening1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/cacm2009c.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-refine -termination	1s	0	TRUE	-refine -termination -domain octagons	1s	0	TRUE	-refine -termination -domain polyhedra
 tests/cacm2009d.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/example2a.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 
 	Terminating but partially undetected
 	------------------------------------
-	TODO: fix the 'bug' variable (right now it is 1 when we have the correct behaviour)
-	Also check why the octagons and polyhedra domains cannot detect termination
+	TODO: why does this require '-ordinals 0' on octagons or more?
+tests/ctl/t2_cav13/P26.c	1s	0	TRUE	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	TODO: check why the octagons and polyhedra domains cannot detect termination
 tests/robust/sv_comp/witness/sv_num4f.c	1s	0	TRUE	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: fix this one as well (also the polyhedra domain cannot detect termination)
 tests/robust/sv_comp/witness/sv_num8.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
@@ -260,6 +298,8 @@ tests/termination/widening2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminatio
 
 	Terminating but undetected
 	--------------------------
+	TODO: why is there a bottom?
+tests/sv_termination/java_LogBuiltIn_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: why is there a top? This one has no reason to, there is no conditional
 tests/robust/sv_comp/safe/sv_num4.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: why isn't this detected?
@@ -346,16 +386,46 @@ tests/termination/example1e.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminatio
 	TODO: why is there a top?
 tests/termination/vijay.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 
-	TODO fails to terminate
-tests/robust/sv_comp/safe/sv_lock2.c	1s	124		-termination	1s	124		-termination -domain octagons	1s	124		-termination -domain polyhedra
-
 	Recursion, arrays, pointers and labels
 	---------  ------  --------     ------
 tests/ctl/koskinen/fig8-2007.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
 tests/ctl/koskinen/fig8-2007_mod.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_1_safe_sfty.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_2_safe_lifeness.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_3_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_4_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_5_safe_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_5_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_6_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_1_unsafe_sfty.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_2_unsafe_lifeness.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_3_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_4_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_5_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/coolant_basis_6_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/ctl/ltl_automizer/simple-2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/ctl/ltl_automizer/timer-intermediate.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
 tests/sv_termination/Ackermann01_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv_termination/Addition01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/Avg_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Binomial_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Et1_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Et2_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Et3_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Et4_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/EvenOdd01_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/Fibonacci01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/gcd01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/LeUserDefRec_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/LogRecursive_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/MultCommutative_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/Parts_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+tests/sv_termination/rec_counter1_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/rec_counter3_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/recHanoi02_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination/TerminatorRec02_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination/twisted_true-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
+tests/sv_termination/TwoWay_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	NOTE octagons are slower than polyhedra (by ~1.5s)
 tests/sv-termination-crafted/4BitCounterPointer_true-termination.c	1s	0	TRUE	-termination	4s	0	TRUE	-termination -domain octagons	3s	0	TRUE	-termination -domain polyhedra
 tests/sv-termination-crafted/Ackermann_false-termination.c	1s	2		-termination	1s	2		-termination -domain octagons	1s	2		-termination -domain polyhedra
@@ -374,81 +444,10 @@ tests/termination/recursion.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminatio
 	TODO: FIXME:
 	'-ordinals 1 -domain octagons' finishes fast and returns TRUE (normal)
 	'-domain octagons' finishes fast and returns UNKNOWN (normal)
-	'-refine -domain octagons' finishes SLOWLY (ANORMAL) and returns UNKNOWN (normal)
-	'-refine -ordinals 1 -domain octagons' finishes SLOWLY (ANORMAL) and returns UNKNOWN (ANORMAL)
+	'-refine -domain octagons' finishes SLOWLY (ABNORMAL) and returns UNKNOWN (normal)
+	'-refine -ordinals 1 -domain octagons' finishes SLOWLY (ABNORMAL) and returns UNKNOWN (ABNORMAL)
 	=> '-refine' BREAKS THIS TEST
 tests/sv-termination-crafted/easy2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 
-	TODO: check from here
-tests/ctl/ltl_automizer/Bug_NoLoopAtEndForTerminatingPrograms_safe.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/ltl_automizer/cav2015.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_1_safe_sfty.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_2_safe_lifeness.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_3_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_4_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_5_safe_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_5_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_6_safe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_1_unsafe_sfty.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_2_unsafe_lifeness.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_3_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_4_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_5_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/coolant_basis_6_unsafe_sfty.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/nestedRandomLoop_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/PotentialMinimizeSEVPABug.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/simple-1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/simple-2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/someNonterminating.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/timer-simple.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/togglecounter_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/ltl_automizer/toggletoggle_true-valid-ltl.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/report/test_existential2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/report/test_existential3.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/report/test_global.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/report/test_until.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/sv_comp/Bangalore_false-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/sv_comp/Ex02_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/sv_comp/Ex07_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/sv_comp/java_Sequence_true-termination_true-no-overflow.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/sv_comp/Madrid_true-no-overflow_false-termination_true-valid-memsafety.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/sv_comp/NO_02_false-termination_true-no-overflow.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/t2_cav13/P3_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/t2_cav13/P3.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/t2_cav13/P4.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/t2_cav13/P25.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/t2_cav13/P26.c	1s	0	TRUE	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/and_test.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/existential_test1.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/existential_test2.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/existential_test3.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/existential_test4.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/fin_ex.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/global_test_simple.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/multi_branch_choice.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/next.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/or_test.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/potential_termination_1.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/ctl/until_test.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/until_existential.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/Addition01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/Avg_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Binomial_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Et1_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Et2_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Et3_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Et4_true_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/EvenOdd01_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/Fibonacci01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/gcd01_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/java_LogBuiltIn_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/LeUserDefRec_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/LogRecursive_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/MultCommutative_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/Parts_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination/rec_counter1_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/rec_counter3_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/recHanoi02_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/TerminatorRec02_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination/TwoWay_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/example2a.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+	TODO: FIXME: fails to terminate
+tests/robust/sv_comp/safe/sv_lock2.c	1s	124		-termination	1s	124		-termination -domain octagons	1s	124		-termination -domain polyhedra
