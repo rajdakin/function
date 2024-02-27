@@ -7,6 +7,8 @@ open Partition
 open Functions
 open Numerical
 
+module VarMap = Mapext.Make(Var)
+
 module Affine (B : PARTITION) : FUNCTION = struct
   module B = B
 
@@ -160,20 +162,27 @@ module Affine (B : PARTITION) : FUNCTION = struct
     | Bot, _ | _, Top -> true
     | _ -> false
 
-  let isConst f =
-    let vars = f.vars in
-    match f.ranking with
-    | Fun f -> begin
-        try
-          Linexpr1.iter
+  let getCompressed f01 f02 =
+    let fvars1, fvars2 = f01.vars, f02.vars in
+    match f01.ranking, f02.ranking with
+    | Fun f1, Fun f2 -> begin
+        let vars1 = ref VarMap.empty in
+        let vars2 = ref VarMap.empty in
+        Linexpr1.iter
             (fun c v ->
-              if not (Coeff.is_zero c) && List.exists (fun v1 -> String.compare (Var.to_string v) v1.varId = 0) vars then
-                raise Exit )
-            f ;
-          true
-        with Exit -> false
+              if not (Coeff.is_zero c) && List.exists (fun v1 -> String.compare (Var.to_string v) v1.varId = 0) fvars1 then
+                vars1 := VarMap.add v c !vars1)
+            f1 ;
+        Linexpr1.iter
+            (fun c v ->
+              if not (Coeff.is_zero c) && List.exists (fun v2 -> String.compare (Var.to_string v) v2.varId = 0) fvars2 then
+                vars2 := VarMap.add v c !vars2)
+            f2 ;
+        if VarMap.equal Coeff.equal !vars1 !vars2
+        then Some(if Coeff.cmp (Linexpr1.get_cst f1) (Linexpr1.get_cst f2) > 0 then f01 else f02)
+        else None
         end
-    | _ -> false
+    | _ -> None
 
   (**)
 

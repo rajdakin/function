@@ -170,7 +170,7 @@ module TerminationIterator (D : RANKING_FUNCTION) = struct
         let j' = D.compress_consts loop_vars j in
         if !tracebwd && not !minimal then (
           Format.fprintf !fmt "j: %a\n" D.print j ;
-          if j != j' then Format.fprintf !fmt "j': %a\n" D.print j' ) ;
+          if j <> j' then Format.fprintf !fmt "j': %a\n" D.print j' ) ;
         (j', r, flag)
     | A_assert (b, _) -> (D.filter ?domain p b, r, flag)
     | A_if ((b, ba), s1, s2) ->
@@ -184,7 +184,7 @@ module TerminationIterator (D : RANKING_FUNCTION) = struct
           Format.fprintf !fmt "p1: %a\n" D.print p1 ;
           Format.fprintf !fmt "p2: %a\n" D.print p2 ;
           Format.fprintf !fmt "j: %a\n" D.print j ;
-          if j != j' then Format.fprintf !fmt "j': %a\n" D.print j' ) ;
+          if j <> j' then Format.fprintf !fmt "j': %a\n" D.print j' ) ;
         (j', r, flag1 || flag2)
     | A_while (l, (b, ba), s) ->
         let a = InvMap.find l !fwdInvMap in
@@ -235,7 +235,13 @@ module TerminationIterator (D : RANKING_FUNCTION) = struct
         let p2' = D.filter ?domain:dm p2 b in
         let p, r, flag = aux i (p2', r, flag2) 1 in
         addBwdInv l p ;
-        if !refine then (D.refine p a, r, flag) else (p, r, flag)
+        let p = if !refine then D.refine p a else p in
+        let p' = D.compress_consts loop_vars p in
+        if !tracebwd && not !minimal then (
+          Format.fprintf !fmt "### %a:DONE ###:\n" label_print l ;
+          Format.fprintf !fmt "p: %a\n" D.print p ;
+          if p <> p' then Format.fprintf !fmt "p': %a\n" D.print p' ) ;
+        (p', r, flag)
     | A_call (f, ss) ->
         let f = StringMap.find f funcs in
         let p = bwdRec funcs env vars p f.funcBody in

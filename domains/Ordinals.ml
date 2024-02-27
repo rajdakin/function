@@ -77,7 +77,10 @@ module OrdinalValued (F : FUNCTION) : FUNCTION = struct
       with Exit -> false
     else F.isLeq k b f1 f2
 
-  let isConst (f, _) = F.isConst f
+  let getCompressed (f1, _ as l) (f2, _ as r) =
+    match F.getCompressed f1 f2 with
+    | None -> None
+    | Some f -> Some(if f == f1 then l else r)
 
   let join k b (f1, ff1) (f2, ff2) =
     let env = B.env b in

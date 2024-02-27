@@ -68,6 +68,8 @@ struct
       upper bounds on the number of program execution steps to termination. *)
   type tree = Bot | Leaf of F.f | Node of L.t * tree * tree
 
+  exception GetOut of tree*tree
+
   (** An element of the ranking functions abstract domain. *)
   type t = {
     domain : B.t option;	(* current reachable program states *)
@@ -1654,28 +1656,38 @@ struct
       The parameter vars contains a list of variables which cannot be removed
       from the decision tree, as such variables are used to compute
       monovariants.
-
-      If any node cannot be compressed, the original tree is returned.
   *)
   let compress_consts inv_vars t =
-    let btop = B.top t.env [] in
-    let rec aux t =
-      match t with
-      | Bot -> None
-      | Leaf _ -> Some t
-      | Node((c0,nc),l,r) ->
-        try
-          Lincons1.iter
-            (fun c v -> if not (Coeff.is_zero c) && List.exists (fun iv -> String.compare iv.varId (Var.to_string v) = 0) inv_vars then raise Exit )
-            c0;
-          match aux l,aux r with
-          | Some(Leaf f1),Some(Leaf f2) when F.defined f1 && F.isConst f1 && F.defined f2 && F.isConst f2 ->
-            Some(Leaf(if F.isLeq COMPUTATIONAL btop f1 f2 then f2 else f1))
-          | _ -> None
-        with Exit -> None
-    in match aux t.tree with
-    | Some tree -> { t with tree }
-    | None -> t
+    (* Forbid any invalid variable (TODO: improve the list to know which
+        variables are safe, i.e. unused to compute the value of any variable
+        in inv_vars) *)
+    if not (List.is_empty inv_vars) then t else
+    match t.tree with
+    | Leaf _ -> t
+    | _ ->
+      let rec aux t =
+        match t with
+        | Bot | Leaf _ -> t
+        | Node((c,nc),l,r) ->
+          try
+            (* (* Check for poisoned/invalid variables in the condition *)
+            Lincons1.iter
+              (fun c v ->
+                if not (Coeff.is_zero c) &&
+                  List.exists (fun iv -> String.compare iv.varId (Var.to_string v) = 0) inv_vars
+                then raise(GetOut(l,r)) )
+              c; *)
+            (* Compress both children *)
+            match aux l,aux r with
+            | Leaf f1,Leaf f2 when F.defined f1 && F.defined f2 -> begin
+              (* The two leaves are compatible, are they compressable? *)
+              match F.getCompressed f1 f2 with
+              | Some l -> Leaf l (* Yes *)
+              | None -> raise(GetOut(Leaf f1,Leaf f2)) (* No *)
+              end
+            | l,r -> raise(GetOut(l,r))
+          with GetOut(l,r) -> Node((c,nc),l,r)
+      in { t with tree=aux t.tree }
 
   let print fmt t =
     let domain = t.domain in
