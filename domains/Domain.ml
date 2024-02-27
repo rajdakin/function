@@ -62,6 +62,8 @@ module type RANKING_FUNCTION = sig
 
   val compress : t -> t
 
+  val compress_consts : var list -> t -> t
+
   val print : Format.formatter -> t -> unit
 
   val print_graphviz_dot : Format.formatter -> t -> unit

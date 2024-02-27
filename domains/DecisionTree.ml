@@ -521,8 +521,7 @@ struct
                else true
              else false
            | COMPUTATIONAL -> 
-             F.isLeq k b f1 f2 (* forall x: f1(x) <= f2(x) *)
-           | _  -> raise (Invalid_argument ("Learning order not defined for tree")) )
+             F.isLeq k b f1 f2 (* forall x: f1(x) <= f2(x) *) )
             
       | Node ((c1,nc1),l1,r1), Node((c2,nc2),l2,r2) when (C.isEq c1 c2) ->
         (aux (l1,l2) (c1::cs)) && (aux (r1,r2) (nc1::cs))
@@ -623,7 +622,6 @@ struct
     let fBotLeftRight = match k with
       | APPROXIMATION -> fun _ _ -> Bot (* use NIL if at least one leaf is NIL *)
       | COMPUTATIONAL -> fun _ _ -> botLeaf (* use bottom leaf if at least one leaf is nil*)
-      | _ -> raise (Invalid_argument "Should not call Learning meet on decision trees")
     in
     let fLeaf cs f1 f2 = 
       let b = match domain with 
@@ -1650,7 +1648,36 @@ struct
         | _ -> Node((c,nc),l,r)
     in { domain = domain; tree = aux t.tree []; env = env; vars = vars }
 
-  let  print fmt t =
+  (*
+      Compress nodes where leaves are constants into a single leaf.
+
+      The parameter vars contains a list of variables which cannot be removed
+      from the decision tree, as such variables are used to compute
+      monovariants.
+
+      If any node cannot be compressed, the original tree is returned.
+  *)
+  let compress_consts inv_vars t =
+    let btop = B.top t.env [] in
+    let rec aux t =
+      match t with
+      | Bot -> None
+      | Leaf _ -> Some t
+      | Node((c0,nc),l,r) ->
+        try
+          Lincons1.iter
+            (fun c v -> if not (Coeff.is_zero c) && List.exists (fun iv -> String.compare iv.varId (Var.to_string v) = 0) inv_vars then raise Exit )
+            c0;
+          match aux l,aux r with
+          | Some(Leaf f1),Some(Leaf f2) when F.defined f1 && F.isConst f1 && F.defined f2 && F.isConst f2 ->
+            Some(Leaf(if F.isLeq COMPUTATIONAL btop f1 f2 then f2 else f1))
+          | _ -> None
+        with Exit -> None
+    in match aux t.tree with
+    | Some tree -> { t with tree }
+    | None -> t
+
+  let print fmt t =
     let domain = t.domain in
     let env = t.env in
     let vars = t.vars in

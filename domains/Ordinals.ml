@@ -77,6 +77,8 @@ module OrdinalValued (F : FUNCTION) : FUNCTION = struct
       with Exit -> false
     else F.isLeq k b f1 f2
 
+  let isConst (f, _) = F.isConst f
+
   let join k b (f1, ff1) (f2, ff2) =
     let env = B.env b in
     let vars = B.vars b in

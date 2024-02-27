@@ -160,6 +160,21 @@ module Affine (B : PARTITION) : FUNCTION = struct
     | Bot, _ | _, Top -> true
     | _ -> false
 
+  let isConst f =
+    let vars = f.vars in
+    match f.ranking with
+    | Fun f -> begin
+        try
+          Linexpr1.iter
+            (fun c v ->
+              if not (Coeff.is_zero c) && List.exists (fun v1 -> String.compare (Var.to_string v) v1.varId = 0) vars then
+                raise Exit )
+            f ;
+          true
+        with Exit -> false
+        end
+    | _ -> false
+
   (**)
 
   let join_ranking k b f1 f2 =
