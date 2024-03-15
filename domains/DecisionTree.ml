@@ -1650,18 +1650,8 @@ struct
         | _ -> Node((c,nc),l,r)
     in { domain = domain; tree = aux t.tree []; env = env; vars = vars }
 
-  (*
-      Compress nodes where leaves are constants into a single leaf.
-
-      The parameter vars contains a list of variables which cannot be removed
-      from the decision tree, as such variables are used to compute
-      monovariants.
-  *)
-  let compress_consts inv_vars t =
-    (* Forbid any invalid variable (TODO: improve the list to know which
-        variables are safe, i.e. unused to compute the value of any variable
-        in inv_vars) *)
-    if not (List.is_empty inv_vars) then t else
+  (* Compress nodes where leaves are constants into a single leaf. *)
+  let compress_consts t =
     match t.tree with
     | Leaf _ -> t
     | _ ->

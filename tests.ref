@@ -62,7 +62,7 @@ tests/sv_termination_restricted/Fibonacci_false-termination.c	1s	0	UNKNOWN	-term
 tests/sv_termination_restricted/Flip_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Gauss_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/GCD_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	2s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination_restricted/GCD2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	6s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination_restricted/GCD2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	4s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Lcm_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Loop_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Middle_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
