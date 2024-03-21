@@ -86,11 +86,11 @@ struct
   let print_tree vars fmt t =
     let rec aux ind fmt t =
       match t with
-      | Bot -> Format.fprintf fmt "\n%sNIL" ind
-      | Leaf f ->  Format.fprintf fmt "\n%sLEAF %a" ind F.print f
-      | Node ((c,_),l,r) -> Format.fprintf fmt "\n%sNODE %a%a%a" ind 
-                              (C.print vars) c (aux (ind ^ " ")) l (aux (ind ^ "  ")) r
-    in aux "" fmt t
+      | Bot -> Format.fprintf fmt "NIL"
+      | Leaf f ->  Format.fprintf fmt "LEAF %a" F.print f
+      | Node ((c,_),l,r) -> Format.fprintf fmt "NODE %a\n%s+ %a\n%s` %a" 
+                              (C.print vars) c ind (aux (ind ^ "| ")) l ind (aux (ind ^ "  ")) r
+    in Format.fprintf fmt "\n%a" (aux "") t
 
   (**
      Prints a tree in graphviz 'dot' format for visualization. 
