@@ -171,13 +171,14 @@ module TerminationIterator (D : RANKING_FUNCTION) = struct
         if !tracebwd && not !minimal then (
           Format.fprintf !fmt "p1: %a\n" D.print p1 ;
           Format.fprintf !fmt "p2: %a\n" D.print p2 ;
-          Format.fprintf !fmt "j: %a\n%a\n" D.print j D.print_graphviz_dot j ;
+          Format.fprintf !fmt "j: %a\n" D.print j ;
           if j <> j' then Format.fprintf !fmt "j': %a\n" D.print j' ) ;
         (j', r, flag1 || flag2)
     | A_while (l, (b, ba), s) ->
         let a = InvMap.find l !fwdInvMap in
         let dm = if !refine then Some a else None in
         let p1 = D.filter ?domain:dm p (fst (negBExp (b, ba))) in
+        let old_fixed_structure = fixed_structure in
         let fixed_structure = true in
         let rec aux (i, _, _) (p2, _, flag2) n =
           if !abort then raise Abort
@@ -224,6 +225,7 @@ module TerminationIterator (D : RANKING_FUNCTION) = struct
         let p, r, flag = aux i (p2', r, flag2) 1 in
         addBwdInv l p ;
         let p = if !refine then D.refine p a else p in
+        let fixed_structure = old_fixed_structure in
         let p' = if fixed_structure then p else D.compress_consts p in
         if !tracebwd && not !minimal then (
           Format.fprintf !fmt "### %a:DONE ###:\n" label_print l ;

@@ -8,7 +8,7 @@
 	-------
 	NOTE this seems slow with polyhedra
 	NOTE: what is this test?
-tests/termination/mine.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	4s	0	UNKNOWN	-termination -domain polyhedra
+tests/termination/mine.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	5s	0	UNKNOWN	-termination -domain polyhedra
 
 	Non-terminating
 	---------------
@@ -62,11 +62,11 @@ tests/sv_termination_restricted/Fibonacci_false-termination.c	1s	0	UNKNOWN	-term
 tests/sv_termination_restricted/Flip_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Gauss_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/GCD_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	2s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination_restricted/GCD2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	4s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination_restricted/GCD2_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	6s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Lcm_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Loop_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/Middle_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-tests/sv_termination_restricted/MirrorInterv_false-termination.c	1s	0	UNKNOWN	-termination	2s	0	UNKNOWN	-termination -domain octagons	2s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv_termination_restricted/MirrorInterv_false-termination.c	1s	0	UNKNOWN	-termination	2s	0	UNKNOWN	-termination -domain octagons	3s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv_termination_restricted/MirrorIntervSim_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: check if we can simplify the state on this test (it seems to do a loop unfolding)
 tests/sv_termination_restricted/Narrowing_false-termination.c	1s	0	UNKNOWN	-termination	3s	0	UNKNOWN	-termination -domain octagons	3s	0	UNKNOWN	-termination -domain polyhedra
@@ -126,7 +126,7 @@ tests/ctl/report/test_existential3.c	1s	0	TRUE	-termination	1s	0	TRUE	-terminati
 tests/ctl/report/test_until.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/ctl/sv_comp/java_Sequence_true-termination_true-no-overflow.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/ctl/t2_cav13/P25.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/ctl/t2_cav13/P3_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain octagons -ordinals 1
+tests/ctl/t2_cav13/P3_cheat.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	2s	0	TRUE	-termination -domain octagons -ordinals 1
 tests/ctl/existential_test1.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/ctl/existential_test2.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/ctl/existential_test3.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
@@ -194,7 +194,8 @@ tests/sv_termination_restricted/java_Sequence_true-termination.c	1s	0	TRUE	-term
 tests/sv_termination_restricted/Log_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/MinusBuiltIn_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/MinusMin_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination_restricted/MinusUserDefined_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
+	NOTE: constants compression breaks this test without -ordinals
+tests/sv_termination_restricted/MinusUserDefined_true-termination.c	1s	0	TRUE	-termination -ordinals 0	1s	0	TRUE	-termination -domain octagons -ordinals 0	1s	0	TRUE	-termination -domain polyhedra -ordinals 0
 tests/sv_termination_restricted/Nested_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/PastaA1_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/sv_termination_restricted/PastaA4_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
@@ -227,7 +228,7 @@ tests/sv-termination-crafted/Lobnya-Boolean-Reordered_true-termination.c	1s	0	TR
 tests/sv-termination-crafted/NonTermination4_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv-termination-crafted/NonTerminationSimple7_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv-termination-crafted/Nyala-2lex_true-termination.c	1s	0	TRUE	-ordinals 1 -termination	1s	0	TRUE	-ordinals 1 -termination -domain octagons	1s	0	TRUE	-ordinals 1 -termination -domain polyhedra
-tests/sv-termination-crafted/Parallel_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
+tests/sv-termination-crafted/Parallel_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv-termination-crafted/Pure2Phase_true-termination.c	1s	0	TRUE	-ordinals 2 -termination	1s	0	TRUE	-ordinals 2 -termination -domain octagons	1s	0	TRUE	-ordinals 2 -termination -domain polyhedra
 tests/sv-termination-crafted/Rotation180_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 tests/sv-termination-crafted/Singapore_plus_false-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
@@ -441,7 +442,7 @@ tests/termination/recursion.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminatio
 	'-refine -domain octagons' finishes SLOWLY (ABNORMAL) and returns UNKNOWN (normal)
 	'-refine -ordinals 1 -domain octagons' finishes SLOWLY (ABNORMAL) and returns UNKNOWN (ABNORMAL)
 	=> '-refine' BREAKS THIS TEST
-tests/sv-termination-crafted/easy2_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+tests/sv-termination-crafted/easy2_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 
 	TODO: FIXME: fails to terminate
 tests/robust/sv_comp/safe/sv_lock2.c	1s	124		-termination	1s	124		-termination -domain octagons	1s	124		-termination -domain polyhedra

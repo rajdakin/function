@@ -77,10 +77,17 @@ module OrdinalValued (F : FUNCTION) : FUNCTION = struct
       with Exit -> false
     else F.isLeq k b f1 f2
 
-  let getCompressed (f1, _ as l) (f2, _ as r) =
-    match F.getCompressed f1 f2 with
+  let getCompressed cs c nc (f1, ff1) (f2, ff2) =
+    match F.getCompressed cs c nc f1 f2 with
     | None -> None
-    | Some f -> Some(if f == f1 then l else r)
+    | Some f ->
+        let rec inner ff1 ff2 ff = match ff1, ff2 with
+          | [], [] -> Some( f, List.rev ff )
+          | [], ff' | ff', [] -> Some( f, List.rev_append ff ff' )
+          | f1 :: ff1, f2 :: ff2 -> match F.getCompressed cs c nc f1 f2 with
+              | None -> None
+              | Some f' -> inner ff1 ff2 (f' :: ff)
+        in inner ff1 ff2 []
 
   let join k b (f1, ff1) (f2, ff2) =
     let env = B.env b in

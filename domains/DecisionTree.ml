@@ -1650,34 +1650,27 @@ struct
         | _ -> Node((c,nc),l,r)
     in { domain = domain; tree = aux t.tree []; env = env; vars = vars }
 
-  (* Compress nodes where leaves are constants into a single leaf. *)
+  (* Compress nodes where leaves are upper-bounded by something into a single leaf. *)
   let compress_consts t =
     match t.tree with
     | Leaf _ -> t
     | _ ->
-      let rec aux t =
+      let rec aux t cs =
         match t with
         | Bot | Leaf _ -> t
         | Node((c,nc),l,r) ->
           try
-            (* (* Check for poisoned/invalid variables in the condition *)
-            Lincons1.iter
-              (fun c v ->
-                if not (Coeff.is_zero c) &&
-                  List.exists (fun iv -> String.compare iv.varId (Var.to_string v) = 0) inv_vars
-                then raise(GetOut(l,r)) )
-              c; *)
             (* Compress both children *)
-            match aux l,aux r with
+            match aux l (c::cs),aux r (nc::cs) with
             | Leaf f1,Leaf f2 when F.defined f1 && F.defined f2 -> begin
               (* The two leaves are compatible, are they compressable? *)
-              match F.getCompressed f1 f2 with
+              match F.getCompressed cs c nc f1 f2 with
               | Some l -> Leaf l (* Yes *)
               | None -> raise(GetOut(Leaf f1,Leaf f2)) (* No *)
               end
             | l,r -> raise(GetOut(l,r))
           with GetOut(l,r) -> Node((c,nc),l,r)
-      in { t with tree=aux t.tree }
+      in { t with tree=aux t.tree [] }
 
   let print fmt t =
     let domain = t.domain in

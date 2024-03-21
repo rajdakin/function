@@ -35,10 +35,7 @@ module type FUNCTION = sig
 
   val isLeq : kind -> B.t -> f -> f -> bool
 
-  (**
-    [getCompressed f1 f2] returns None if the expressions cannot be
-    compressed, or [Some f] where [(f == f1) || (f == f2)] *)
-  val getCompressed : f -> f -> f option
+  val getCompressed : Lincons1.t list -> Lincons1.t -> Lincons1.t -> f -> f -> f option
 
   val join : kind -> B.t -> f -> f -> f
   val learn: B.t -> f -> f -> f (* conflict-driven analysis *)
