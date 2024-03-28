@@ -178,7 +178,6 @@ tests/sv_termination_restricted/b.14_true-termination.c	1s	0	UNKNOWN	-terminatio
 tests/sv_termination_restricted/b.15_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/b.16_true-termination.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 tests/sv_termination_restricted/b.17_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
-tests/sv_termination_restricted/c.01_assume_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/sv_termination_restricted/c.02_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/sv_termination_restricted/c.03_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra	1s	0	TRUE	-termination -domain polyhedra -ordinals 1
 tests/sv_termination_restricted/c.07_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	TRUE	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
@@ -266,8 +265,9 @@ tests/example2a.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons
 	------------------------------------
 	TODO: why does this require '-ordinals 0' on octagons or more?
 tests/ctl/t2_cav13/P26.c	1s	0	TRUE	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
-	TODO: check why the octagons and polyhedra domains cannot detect termination
-tests/robust/sv_comp/witness/sv_num4f.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons -ordinals 0	1s	124		-termination -domain octagons -refine	1s	0	TRUE	-termination -domain polyhedra -ordinals 0	1s	0	UNKNOWN	-termination -domain polyhedra -ordinals 0 -refine
+	TODO: check why the octagons domain cannot detect termination
+tests/robust/sv_comp/witness/sv_num4f.c	1s	0	TRUE	-termination	1s	0	TRUE	-termination -domain octagons -ordinals 0	1s	124		-termination -domain octagons -refine	1s	0	TRUE	-termination -domain polyhedra -ordinals 0	1s	0	TRUE	-termination -domain polyhedra -ordinals 0 -refine
+	TODO: look from here
 	TODO: this fails with octagons
 tests/sv_termination_restricted/a.09_assume_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	TRUE	-termination -domain polyhedra
 	TODO: check why the octagons domain cannot detect termination
@@ -296,6 +296,8 @@ tests/termination/widening2.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-terminatio
 	--------------------------
 	TODO: why is there a bottom?
 tests/sv_termination/java_LogBuiltIn_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
+	TODO: why is there a top?
+tests/sv_termination_restricted/c.01_assume_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
 	TODO: why is there a top? This one has no reason to, there is no conditional
 	TODO: why isn't this detected?
 tests/sv_termination_restricted/c.01-no-inv_true-termination.c	1s	0	UNKNOWN	-termination	1s	0	UNKNOWN	-termination -domain octagons	1s	0	UNKNOWN	-termination -domain polyhedra
