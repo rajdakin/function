@@ -105,7 +105,12 @@ do
 		
 		if (( errcode != expcode ))
 		then
-			errs="$errs${greycolor}[${resetcolor}$params${greycolor}] ${resetcolor}${lightredcolor}Unexpected return code:${resetcolor}${greycolor} expected ${resetcolor}${lightgreencolor}$expcode${resetcolor}${greycolor}, got ${resetcolor}${lightredcolor}$errcode${resetcolor}"$'\n'
+			errs="$errs${greycolor}[${resetcolor}$params${greycolor}] ${resetcolor}${lightredcolor}Unexpected return code:${resetcolor}${greycolor} expected ${resetcolor}${lightgreencolor}$expcode${resetcolor}${greycolor}"
+			if (( expcode == 0 ))
+			then
+				errs="$errs ($expout)"
+			fi
+			errs="$errs, got ${resetcolor}${lightredcolor}$errcode${resetcolor}"$'\n'
 		elif (( errcode == 0 )) && [[ $(echo -- "$output" | grep "Analysis Result: " | cut -d' ' -s -f3-) != "$expout" ]]
 		then
 			errs="$errs${greycolor}[${resetcolor}$params${greycolor}] ${resetcolor}${lightredcolor}Unexpected return message:${resetcolor}${greycolor} expected ${resetcolor}${lightgreencolor}$expout${resetcolor}${greycolor}, got ${resetcolor}${lightredcolor}$(echo -- "$output" | grep "Analysis Result: " | cut -d' ' -s -f3-)${resetcolor}"$'\n'
