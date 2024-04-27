@@ -184,7 +184,7 @@ module Affine (B : PARTITION) : FUNCTION = struct
         let arr1 = Lincons1.array_make f01.env (List.length cs + 1) in
         let arr2 = Lincons1.array_make f01.env (List.length cs + 1) in
         Lincons1.array_set arr1 0 c;
-        Lincons1.array_set arr1 0 nc;
+        Lincons1.array_set arr2 0 nc;
         List.iteri (fun i c -> Lincons1.array_set arr1 (i + 1) c; Lincons1.array_set arr2 (i + 1) c) cs;
         let cs1 = Abstract1.of_lincons_array manager f01.env arr1 in
         let cs2 = Abstract1.of_lincons_array manager f02.env arr2 in
