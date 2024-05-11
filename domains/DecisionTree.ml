@@ -1095,8 +1095,8 @@ struct
                     then (* nc is redundant *)
                       aux (((c, nc), (false, true)) :: p) ls (t1, t2) leafcs cs
                     else (* c and nc are not redundant *)
-                      merge (aux (((c, nc), (true, false)) :: p) ls (t1, t2) leafcs (c :: cs),
-                            aux (((c, nc), (false, false)) :: p) ls (t1, t2) leafcs (nc :: cs)) cs
+                      merge (aux (((c, nc), (true, true)) :: p) ls (t1, t2) leafcs (c :: cs),
+                            aux (((c, nc), (false, true)) :: p) ls (t1, t2) leafcs (nc :: cs)) cs
                   end else raise (Invalid_argument "widen:aux:")
             end
       in
